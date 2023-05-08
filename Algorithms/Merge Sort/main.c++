@@ -3,12 +3,12 @@
 
 int main()
 {
-    int s[] = {51, -2, 1, 443,-10, 1432};
-    int length = sizeof(s) / sizeof(s[0]);
+    int arr[] = {51, -2, 1, 443,-10, 1432};
+    int length = sizeof(arr) / sizeof(arr[0]);
 
-    Print(s, length);
+    Print(arr, length);
 
-    Merge_Sort(s,0, length-1);
+    Merge_Sort(arr,0, length-1);
 
-    Print(s, length);
+    Print(arr, length);
 }
