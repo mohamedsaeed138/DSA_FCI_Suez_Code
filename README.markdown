@@ -1,5 +1,5 @@
 # DSA FCI Suez Code
-## Data Structers &amp; Algorithms Code
+## Data Structures &amp; Algorithms Code
 
 ***اتمني من الله العظيم رب العرش العظيم ان يرزقنا ايانا واياكم الجنة,
 وان يغفرلنا جميع ذنوبنا ما  كبر منها وما صغر,
