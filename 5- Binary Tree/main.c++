@@ -27,7 +27,7 @@ int main()
 
     cout << "Inorder Traverse : ";
     tree.Inorder_Traverse([](int data)
-                          { cout << data*2 << " "; }); // 20 10 2 9 -1 5 8
+                          { cout << data * 2 << " "; }); // 20 10 2 9 -1 5 8
     cout << endl;
 
     cout << "Preorder Traverse : ";
