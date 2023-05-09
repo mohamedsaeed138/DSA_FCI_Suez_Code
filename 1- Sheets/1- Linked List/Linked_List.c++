@@ -118,7 +118,7 @@ template <class T>
 void Linked_List<T>::Delete_At(int position)
 {
     if (position < 0 || position > Count() - 1)
-        throw "error : out of range exception\n"; // throw exception
+        throw "error : out of range exception !\n"; // throw exception
     else if (position == 0)
     {
         Delete_First();
