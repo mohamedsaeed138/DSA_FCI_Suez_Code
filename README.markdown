@@ -23,7 +23,7 @@
     3. Applications
        1. Palindrome
 4. Time Complexity 
-    * Comparison Between 3 Sorting Techniques
+    * Comparison Between 3 Sorting Techniques (Selection-Bubble-Insertion)
 5. Binary Tree
 
 ### Algorithms
