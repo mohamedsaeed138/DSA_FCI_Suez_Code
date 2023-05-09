@@ -17,24 +17,25 @@
  1. Linked List
     * bool Is_Empty();
     * int Count();
-    * void Insert_First(T);
-    * void Insert_Last(T);
-    * void Insert_At(T, int);
+    * void Insert_First(T value);
+    * void Insert_Last(T value);
+    * void Insert_At(T value, int position);
     * void Delete_First();
     * void Delete_Last();
-    * void Delete_At(int);
+    * void Delete_At(int position);
     * void Display();
     * void Reverse();
-    * void Merge(Linked_List);
+    * void Merge(Linked_List list_2);
     * Linked_List<T> Split();
     * T Max();
+ 
  2. Stack
      
     1. Stack By Array
        * bool Is_Empty();
        * bool Stack_Full();
        * int Count();
-       * void Push(T);
+       * void Push(T value);
        * T Pop();
        * T Peek();
        * void Display();
@@ -42,7 +43,7 @@
     2. Stack By Linked List
          * bool Is_Empty();
          * int Count();
-         * void Push(T);
+         * void Push(T value);
          * T Pop();
          * T Peek();
          * void Display();
@@ -58,16 +59,16 @@
        * bool Is_Empty();
        * int Size();
        * bool Is_Full();
-       * void EnQueue(T);
-       * void DeQueue(T &);
+       * void EnQueue(T value);
+       * void DeQueue(T & variable);
        * T Peek();
-
        * void Display();
+   
     2. Queue By Linked List  
        * bool Is_Empty();
        * int Size();
-       * void EnQueue(T);
-       * void DeQueue(T &);
+       * void EnQueue(T value);
+       * void DeQueue(T & variable);
        * T Peek();
        * void Display(); 
     
@@ -80,7 +81,7 @@
  5. Binary Tree
       * int Size();   
       * int Height();    
-      * void Insert(T);    
+      * void Insert(T value);    
       * void Level_order_Traverse(void (*Action)(T));
       * void Preorder_Traverse(void (*Action)(T));
       * void Inorder_Traverse(void (*Action)(T));
