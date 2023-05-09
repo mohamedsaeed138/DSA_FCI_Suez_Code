@@ -1,6 +1,6 @@
-#include "Selection_Sort.c++"
-#include "Bubble_Sort.c++"
-#include "Insertion_Sort.c++"
+#include "Selection Sort.c++"
+#include "Bubble Sort.c++"
+#include "Insertion Sort.c++"
 #include <time.h>
 
 const int length = 1000; // array's length
