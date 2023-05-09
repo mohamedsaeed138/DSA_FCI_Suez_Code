@@ -22,19 +22,19 @@ int main()
      end = clock();
 
      cout << "Selection Sort with arr contains "
-          << length << " element took : " << double(end - start) << " millisec\n";
+          << length << " element took : " << double(end - start) << " millisecond\n";
 
      start = clock();
      Bubble_Sort(arr_2, length);
      end = clock();
 
      cout << "Bubble Sort with arr contains "
-          << length << " element took : " << double(end - start) << " millisec\n";
+          << length << " element took : " << double(end - start) << " millisecond\n";
 
      start = clock();
      Insertion_Sort(arr_3, length);
      end = clock();
 
      cout << "Insertion Sort with arr contains "
-          << length << " element took : " << double(end - start) << " millisec\n";
+          << length << " element took : " << double(end - start) << " millisecond\n";
 }
