@@ -25,7 +25,7 @@ template <class T>
 void Stack_Array<T>::Push(T New_Item)
 {
     if (top == Max_Size - 1) // top :0->99
-        cout << "The Stack_Array is Full !\n";
+        throw exception();   // error : The Stack_Array is Full !
     else
         items[++top] = New_Item;
 }
@@ -34,10 +34,7 @@ template <class T>
 T Stack_Array<T>::Pop()
 {
     if (top == -1)
-    {
-        cout << "The Stack_Array Is Empty.\n";
-        return NULL;
-    }
+        throw exception(); // error: The Stack_Array Is Empty.
     else
         return items[top--];
 }
@@ -46,10 +43,8 @@ template <class T>
 T Stack_Array<T>::Peek()
 {
     if (top == -1)
-    {
-        cout << "The Stack_Array Is Empty.\n";
-        return NULL;
-    }
+        throw exception(); // error: The Stack_Array Is Empty.
+
     else
         return items[top];
 }
@@ -64,7 +59,6 @@ void Stack_Array<T>::Display()
     {
         cout << items[i] << (i == 0 ? "" : " , ");
     }
-
 
     cout << " ]" << endl;
 }

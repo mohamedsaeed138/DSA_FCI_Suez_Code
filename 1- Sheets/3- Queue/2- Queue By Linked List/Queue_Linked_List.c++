@@ -20,10 +20,9 @@ void Queue_Linked_List<T>::EnQueue(T New_Item)
     Node *New_Node = new Node;
     New_Node->data = New_Item;
     New_Node->next = NULL;
-    +
 
-        if (front == NULL)
-            rear = front = New_Node;
+    if (front == NULL)
+        rear = front = New_Node;
     else
     {
         rear->next = New_Node;
@@ -37,10 +36,8 @@ template <class T>
 void Queue_Linked_List<T>::DeQueue(T &item)
 {
     if (front == NULL)
-    {
-        item = NULL;
-        return;
-    }
+
+        throw exception(); // error : queue is empty !
 
     Node *Tmp = front;
     item = front->data;
@@ -50,6 +47,7 @@ void Queue_Linked_List<T>::DeQueue(T &item)
 
     if (front == NULL)
         rear = NULL;
+
     size--;
 }
 
@@ -57,7 +55,8 @@ template <class T>
 T Queue_Linked_List<T>::Peek()
 {
     if (front == NULL)
-        return NULL;
+        throw exception(); // error : queue is empty !
+
     return front->data;
 }
 

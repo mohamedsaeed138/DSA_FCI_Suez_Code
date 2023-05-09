@@ -2,9 +2,7 @@
 #include "Circular_Queue.h"
 
 template <class T>
-Circular_Queue<T>::Circular_Queue() : front(0), rear(-1), size(0)
-{
-}
+Circular_Queue<T>::Circular_Queue() : front(0), rear(-1), size(0) {}
 
 template <class T>
 bool Circular_Queue<T>::Is_Empty()
@@ -28,7 +26,7 @@ template <class T>
 void Circular_Queue<T>::EnQueue(T Element)
 {
     if (Is_Full())
-        return;
+        throw exception(); // error: queue is full !
 
     rear = (rear + 1) % Max_Size;
     array[rear] = Element;
@@ -39,22 +37,20 @@ template <class T>
 void Circular_Queue<T>::DeQueue(T &item)
 {
     if (Is_Empty())
-    {
-        item = NULL;
-    }
-    else
-    {
-        item = array[front];
-        front = (front + 1) % Max_Size;
-        size--;
-    }
+
+        throw exception(); // error: queue is empty !
+
+    item = array[front];
+    front = (front + 1) % Max_Size;
+    size--;
 }
 
 template <class T>
 T Circular_Queue<T>::Peek()
 {
     if (Is_Empty())
-        return NULL;
+        throw exception(); // error: queue is empty !
+
     return array[front];
 }
 

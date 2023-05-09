@@ -37,7 +37,7 @@ template <class T>
 T Stack_Linked_List<T>::Pop()
 {
     if (top == NULL)
-        return NULL;
+        throw exception(); // error : Stack is empty !
 
     Node *Tmp = top;
     T value = top->data;
@@ -50,7 +50,7 @@ template <class T>
 T Stack_Linked_List<T>::Peek()
 {
     if (top == NULL)
-        return NULL;
+        throw exception(); // error : Stack is empty !
     else
         return top->data;
 }

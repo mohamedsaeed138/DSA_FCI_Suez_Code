@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 template <class T>
 class Stack_Linked_List

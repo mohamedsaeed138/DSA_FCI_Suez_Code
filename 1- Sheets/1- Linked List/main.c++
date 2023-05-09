@@ -59,4 +59,13 @@ int main()
 
     List_1.Delete_Last();
     List_1.Display(); //[  ]
+
+    try
+    {
+        List_1.Max(); // now Count() = 0 so Max(): will throw an exception
+    }
+    catch (exception)
+    {
+        cout << "Error Linked List is empty !\n";
+    }
 }
