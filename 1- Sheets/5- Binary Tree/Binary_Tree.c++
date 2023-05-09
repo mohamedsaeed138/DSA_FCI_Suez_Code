@@ -93,15 +93,12 @@ void Binary_Tree<T>::Level_order_Traverse(void (*Action)(T))
         Node *node = nodes.front();
         nodes.pop();
 
-        if (node == NULL)
-            continue;
+        (*Action)(node->data);
 
-        else
-        {
-            (*Action)(node->data);
+        if (node->left != NULL)
             nodes.push(node->left);
+        if (node->right != NULL)
             nodes.push(node->right);
-        }
     }
 }
 
