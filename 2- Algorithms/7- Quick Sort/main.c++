@@ -3,12 +3,12 @@
 
 int main()
 {
-    int arr[] = {51, -2, 1, 443, 1432};
+    int arr[] = {1432, 51, -2, 1, 443};
     int length = sizeof(arr) / sizeof(arr[0]);
 
-    Print(arr, length);
+    Print(arr, length); // [ 1432 , 51 , -2 , 1 , 443 ]
 
-    Quick_Sort(arr,0, length-1);
+    Quick_Sort(arr, 0, length - 1);
 
-    Print(arr, length);
+    Print(arr, length); // [ -2 , 1 , 51 , 443 , 1432 ]
 }
