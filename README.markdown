@@ -41,15 +41,10 @@
        
     2. Stack By Linked List
          * bool Is_Empty();
-
          * int Count();
-
          * void Push(T);
-
          * T Pop();
-
          * T Peek();
-
          * void Display();
           
     3. Applications
@@ -83,17 +78,13 @@
     * Comparison Between 3 Sorting Techniques (Selection-Bubble-Insertion)
  
  5. Binary Tree
-      * int Size();
-
-      * int Height();
-
-      * void Insert(T);
-
+      * int Size();   
+      * int Height();    
+      * void Insert(T);    
       * void Level_order_Traverse(void (*Action)(T));
       * void Preorder_Traverse(void (*Action)(T));
       * void Inorder_Traverse(void (*Action)(T));
       * void Postorder_Traverse(void (*Action)(T));
-
       * void Display();
 
 ### Algorithms
