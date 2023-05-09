@@ -3,6 +3,14 @@
 ***اسأل الله العظيم رب العرش العظيم ان يرزقنا واياكم الجنة,
 وان يغفر لنا جميع ذنوبنا ما  كبر منها وما صغر,
 اللهم اجعل هذا العمل علما كريما ينتفع به, واجعله في ميزان حسناتي.***
+## Notes
+
+   1. I used Template in all Data Structures & Algorithms
+   2. a tip to understand (pointer to    function ) that i used in traversal
+    functions instead of (cout<<) , 
+    for example :<br>
+    void *x(int ) 's a pointer to function that accept integer parameter and do something then return nothing and to call that function we use (*pointer_name)(passed_argument) like ( *x )( 8 );
+   3. I used exception handling in my code ,so if you didn't know what  it's ,please go to this link : https://www.w3schools.com/cpp/cpp_exceptions.asp it's very easy to learn .  
 
 ## Repository Content
 ### Sheets
@@ -97,12 +105,3 @@
 5. Insertion Sort    
 6. Merge Sort
 7. Quick Sort
-
-### Notes
-
-   1. I used Template in all Data Structures & Algorithms
-   2. a tip to understand (pointer to    function ) that i used in traversal
-    functions instead of (cout<<) , 
-    for example :<br>
-    void *x(int ) 's a pointer to function that accept integer parameter and do something then return nothing and to call that function we use (*pointer_name)(passed_argument) like ( *x )( 8 );
-   3. I used exception handling in my code ,so if you didn't know what  it's ,please go to this link : https://www.w3schools.com/cpp/cpp_exceptions.asp it's very easy to learn .  
