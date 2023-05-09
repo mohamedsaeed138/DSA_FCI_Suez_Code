@@ -15,23 +15,38 @@
 ## Repository Content
 ### Sheets
  1. Linked List
-    * bool Is_Empty();
-    * int Count();
-    * void Insert_First(T value);
-    * void Insert_Last(T value);
-    * void Insert_At(T value, int position);
-    * void Delete_First();
-    * void Delete_Last();
-    * void Delete_At(int position);
-    * void Display();
-    * void Reverse();
-    * void Merge(Linked_List list_2);
-    * Linked_List<T> Split();
-    * T Max();
+   
+    * Operations
+      
+      * bool Is_Empty();
+      * int Count();
+      * void Insert_First(T value);
+      * void Insert_Last(T value);
+      * void Insert_At(T value, int position);
+      * void Delete_First();
+      * void Delete_Last();
+      * void Delete_At(int position);
+      * void Display();
+      * void Reverse();
+      * void Merge(Linked_List list_2);
+      * Linked_List<T> Split();
+      * T Max();
  
  2. Stack
      
     1. Stack By Array
+       
+    2. Stack By Linked List
+      
+          
+    3. Applications
+       1. Palindrome
+       2. Reverse String
+       3. Balanced Parentheses  
+       4. Postfix Evaluation 
+    
+    * Operations
+       
        * bool Is_Empty();
        * bool Stack_Full();
        * int Count();
@@ -39,46 +54,34 @@
        * T Pop();
        * T Peek();
        * void Display();
-       
-    2. Stack By Linked List
-         * bool Is_Empty();
-         * int Count();
-         * void Push(T value);
-         * T Pop();
-         * T Peek();
-         * void Display();
-          
-    3. Applications
-       1. Palindrome
-       2. Reverse String
-       3. Balanced Parentheses  
-       4. Postfix Evaluation 
+
  3. Queue
      
-    1. Circular Queue By Array
-       * bool Is_Empty();
-       * int Size();
+    1. Circular Queue By Array      
+   
+    2. Queue By Linked List  
+    
+    3. Applications
+       
+       1. Palindrome 
+    
+    * Operations      
+      
+       
+       * bool Is_Empty();     
        * bool Is_Full();
+       * int Size();
        * void EnQueue(T value);
        * void DeQueue(T & variable);
        * T Peek();
        * void Display();
-   
-    2. Queue By Linked List  
-       * bool Is_Empty();
-       * int Size();
-       * void EnQueue(T value);
-       * void DeQueue(T & variable);
-       * T Peek();
-       * void Display(); 
-    
-    3. Applications
-       1. Palindrome 
- 
- 4. Time Complexity 
+      
+ 1. Time Complexity 
     * Comparison Between 3 Sorting Techniques (Selection-Bubble-Insertion)
  
- 5. Binary Tree
+ 2. Binary Tree
+   * Operetions
+   * 
       * int Size();   
       * int Height();    
       * void Insert(T value);    

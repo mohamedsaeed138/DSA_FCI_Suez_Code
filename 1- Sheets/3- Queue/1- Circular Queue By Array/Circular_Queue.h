@@ -19,9 +19,9 @@ public:
 
     bool Is_Empty();
 
-    int Size();
-
     bool Is_Full();
+
+    int Size();
 
     void EnQueue(T);
 

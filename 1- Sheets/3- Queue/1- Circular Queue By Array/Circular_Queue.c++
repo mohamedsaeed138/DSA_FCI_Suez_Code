@@ -11,15 +11,15 @@ bool Circular_Queue<T>::Is_Empty()
 }
 
 template <class T>
-int Circular_Queue<T>::Size()
-{
-    return size;
-}
-
-template <class T>
 bool Circular_Queue<T>::Is_Full()
 {
     return size == Max_Size;
+}
+
+template <class T>
+int Circular_Queue<T>::Size()
+{
+    return size;
 }
 
 template <class T>
