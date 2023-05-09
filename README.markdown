@@ -34,8 +34,7 @@
 
        3. Balanced Parentheses
 
-       4. Pos
-       5. tfix Evaluation
+       4. Postfix Evaluation
 
  3. Queue
 
