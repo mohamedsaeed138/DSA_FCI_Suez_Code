@@ -13,7 +13,7 @@
     2. Stack By Linked List   
     3. Applications
        1. Palindrome
-       2. Reverse_String
+       2. Reverse String
        3. Balanced Parentheses  
        4. Postfix Evaluation
 3. Queue
