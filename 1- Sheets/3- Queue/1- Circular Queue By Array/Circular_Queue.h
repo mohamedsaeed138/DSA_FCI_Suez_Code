@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
+
 const int Max_Size = 100;
 
 template <class T>
