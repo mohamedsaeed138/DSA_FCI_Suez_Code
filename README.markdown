@@ -7,24 +7,86 @@
 ## Repository Content
 ### Sheets
  1. Linked List
+    * bool Is_Empty();
+    * int Count();
+    * void Insert_First(T);
+    * void Insert_Last(T);
+    * void Insert_At(T, int);
+    * void Delete_First();
+    * void Delete_Last();
+    * void Delete_At(int);
+    * void Display();
+    * void Reverse();
+    * void Merge(Linked_List);
+    * Linked_List<T> Split();
+    * T Max();
  2. Stack
      
     1. Stack By Array
-    2. Stack By Linked List   
+       * bool Is_Empty();
+       * bool Stack_Full();
+       * int Count();
+       * void Push(T);
+       * T Pop();
+       * T Peek();
+       * void Display();
+       
+    2. Stack By Linked List
+         * bool Is_Empty();
+
+         * int Count();
+
+         * void Push(T);
+
+         * T Pop();
+
+         * T Peek();
+
+         * void Display();
+          
     3. Applications
        1. Palindrome
        2. Reverse String
        3. Balanced Parentheses  
-       4. Postfix Evaluation
-3. Queue
+       4. Postfix Evaluation 
+ 3. Queue
      
     1. Circular Queue By Array
-    2. Queue By Linked List   
+       * bool Is_Empty();
+       * int Size();
+       * bool Is_Full();
+       * void EnQueue(T);
+       * void DeQueue(T &);
+       * T Peek();
+
+       * void Display();
+    2. Queue By Linked List  
+       * bool Is_Empty();
+       * int Size();
+       * void EnQueue(T);
+       * void DeQueue(T &);
+       * T Peek();
+       * void Display(); 
+    
     3. Applications
-       1. Palindrome
-4. Time Complexity 
+       1. Palindrome 
+ 
+ 4. Time Complexity 
     * Comparison Between 3 Sorting Techniques (Selection-Bubble-Insertion)
-5. Binary Tree
+ 
+ 5. Binary Tree
+      * int Size();
+
+      * int Height();
+
+      * void Insert(T);
+
+      * void Level_order_Traverse(void (*Action)(T));
+      * void Preorder_Traverse(void (*Action)(T));
+      * void Inorder_Traverse(void (*Action)(T));
+      * void Postorder_Traverse(void (*Action)(T));
+
+      * void Display();
 
 ### Algorithms
 
@@ -34,6 +96,13 @@
 4. Bubble Sort
 5. Insertion Sort    
 6. Merge Sort
-7. Quick Sort    
-       
-       
+7. Quick Sort
+
+### Notes
+
+   1. I used Template in all Data Structures & Algorithms
+   2. a tip to understand (pointer to    function ) that i used in traversal
+    functions instead of (cout<<) , 
+    for example :<br>
+    void *x(int ) 's a pointer to function that accept integer parameter and do something then return nothing and to call that function we use (*pointer_name)(passed_argument) like ( *x )( 8 );
+   3. I used exception handling in my code ,so if you didn't know what  it's ,please go to this link : https://www.w3schools.com/cpp/cpp_exceptions.asp it's very easy to learn .  
