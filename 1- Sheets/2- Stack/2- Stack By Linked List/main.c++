@@ -4,21 +4,22 @@ using namespace std;
 
 int main()
 {
-    Stack_Linked_List<int> s;
-    cout << s.Is_Empty() << endl; // 1
+    Stack_Linked_List<int> stack;
+    cout << "is Stack empty? -" << (stack.Is_Empty() ? "True" : "False") << endl; // 1
 
-    s.Push(10);
-    s.Push(15);
-    s.Push(19);
+    stack.Push(10);
+    stack.Push(15);
+    stack.Push(19);
 
-    cout << s.Count() << endl; // 3
-    s.Display();               //[ 19 , 15 , 10]
+    cout << "Count : " << stack.Count() << endl; // 3
+    stack.Display();                             //[ 19 , 15 , 10]
 
-    int c = s.Peek();
-    cout << c << endl; // 19
+    int c = stack.Peek();
+    cout << "c = " << c << endl; // 19
 
-    int f = s.Pop();
-    cout << f << endl;         // 19
-    s.Display();               //[ 15 , 10 ]
-    cout << s.Count() << endl; // 2
+    int f = stack.Pop();
+    cout << "f = " << f << endl; // 19
+
+    stack.Display();                             //[ 15 , 10 ]
+    cout << "Count : " << stack.Count() << endl; // 2
 }

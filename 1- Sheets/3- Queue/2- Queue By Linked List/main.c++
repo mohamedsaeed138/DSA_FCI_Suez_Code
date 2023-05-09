@@ -5,8 +5,8 @@ int main()
     try
     {
         int i;
-        queue.DeQueue(i); // error : queue is empty ,an exception will be thrown
-        cout << "i = " << i << endl;
+        queue.DeQueue(i);            // error : queue is empty ,an exception will be thrown
+        cout << "i = " << i << endl; // will not be executed due to exception thrown
     }
     catch (exception)
     {
@@ -22,9 +22,10 @@ int main()
 
     int c;
     queue.DeQueue(c);
-    cout << c << endl; // 1
-    queue.Display();   //[ 2 , 3 , 4 ]
+    cout << "c = " << c << endl; // 1
+
+    queue.Display(); //[ 2 , 3 , 4 ]
 
     int x = queue.Peek();
-    cout << x; // 2
+    cout << "x = " << x << endl; // 2
 }

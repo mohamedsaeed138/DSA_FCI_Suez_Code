@@ -17,13 +17,15 @@ int main()
     queue.EnQueue(2);
     queue.EnQueue(3);
     queue.EnQueue(4);
+
     queue.Display(); //[ 1 , 2 , 3 , 4 ]
 
     int c;
     queue.DeQueue(c);
-    cout << c << endl; // 1
-    queue.Display();   //[ 2 , 3 , 4 ]
+    cout << "c = " << c << endl; // 1
+
+    queue.Display(); //[ 2 , 3 , 4 ]
 
     int x = queue.Peek();
-    cout << x; // 2
+    cout << "x = " << x << endl; // 2
 }
