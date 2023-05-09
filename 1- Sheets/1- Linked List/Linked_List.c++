@@ -57,7 +57,9 @@ template <class T>
 void Linked_List<T>::Insert_At(T New_Item, int position)
 {
     if (position < 0 || position > Count())
-        throw exception(); // error: out of range exception
+
+        throw "error : out of range exception !\n"; // throw exception
+
     else if (position == 0)
     {
         Insert_First(New_Item);
@@ -83,7 +85,9 @@ template <class T>
 void Linked_List<T>::Delete_First()
 {
     if (head == NULL)
-        throw exception(); // error : linked list is empty
+
+        throw "error : Linked List is empty exception !\n"; // throw exception
+
     Node *Tmp = head;
     head = head->next;
     delete Tmp;
@@ -92,7 +96,9 @@ template <class T>
 void Linked_List<T>::Delete_Last()
 {
     if (head == NULL)
-        throw exception(); // error : linked list is empty
+
+        throw "error : Linked List is empty exception !\n"; // throw exception
+
     else if (head->next == NULL)
         Delete_First();
     else
@@ -112,7 +118,7 @@ template <class T>
 void Linked_List<T>::Delete_At(int position)
 {
     if (position < 0 || position > Count() - 1)
-        throw exception(); // error : out of range exception
+        throw "error : out of range exception\n"; // throw exception
     else if (position == 0)
     {
         Delete_First();
@@ -208,7 +214,7 @@ template <class T>
 T Linked_List<T>::Max()
 {
     if (head == NULL)
-        throw exception(); // error: linked list is empty
+        throw "error : Linked List is empty exception !\n"; // throw exception
 
     T max = head->data;
 

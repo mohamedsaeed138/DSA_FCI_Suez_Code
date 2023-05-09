@@ -7,6 +7,15 @@ int main()
     Stack_Linked_List<int> stack;
     cout << "is Stack empty? -" << (stack.Is_Empty() ? "True" : "False") << endl; // 1
 
+    try
+    {
+        stack.Pop(); // Pop will throw exception because the stack is empty
+    }
+    catch (const char *message) // exception handling
+    {
+        cout << message; // error : Stack is empty exception !
+    }
+
     stack.Push(10);
     stack.Push(15);
     stack.Push(19);

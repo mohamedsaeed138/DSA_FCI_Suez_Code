@@ -24,8 +24,8 @@ int Stack_Array<T>::Count()
 template <class T>
 void Stack_Array<T>::Push(T New_Item)
 {
-    if (top == Max_Size - 1) // top :0->99
-        throw exception();   // error : The Stack_Array is Full !
+    if (top == Max_Size - 1)                         // top :0->99
+        throw "error : Stack is Full exception !\n"; // throw exception
     else
         items[++top] = New_Item;
 }
@@ -34,7 +34,7 @@ template <class T>
 T Stack_Array<T>::Pop()
 {
     if (top == -1)
-        throw exception(); // error: The Stack_Array Is Empty.
+        throw "error : Stack is empty exception !\n"; // throw exception
     else
         return items[top--];
 }
@@ -43,8 +43,7 @@ template <class T>
 T Stack_Array<T>::Peek()
 {
     if (top == -1)
-        throw exception(); // error: The Stack_Array Is Empty.
-
+        throw "error : Stack is empty exception !\n"; // throw exception
     else
         return items[top];
 }

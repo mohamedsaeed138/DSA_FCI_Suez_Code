@@ -36,8 +36,7 @@ template <class T>
 void Queue_Linked_List<T>::DeQueue(T &item)
 {
     if (front == NULL)
-
-        throw exception(); // error : queue is empty !
+        throw "error : Queue is emtpy exception !\n"; // throw exception
 
     Node *Tmp = front;
     item = front->data;
@@ -55,7 +54,7 @@ template <class T>
 T Queue_Linked_List<T>::Peek()
 {
     if (front == NULL)
-        throw exception(); // error : queue is empty !
+        throw "error : Queue is emtpy exception !\n"; // throw exception
 
     return front->data;
 }

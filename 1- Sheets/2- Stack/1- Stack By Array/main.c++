@@ -34,11 +34,11 @@ int main()
 
     try
     {
-        stack.Push(1); // error stack_array is full
+        stack.Push(1); // stack_array is full so Push(1) will throw exception
     }
-    catch (exception)
+    catch (const char *message) // exception handling
     {
-        cout << "The Stack is Full !\n";
+        cout << message; // error : Stack is Full exception !
     }
 
     stack.Pop();

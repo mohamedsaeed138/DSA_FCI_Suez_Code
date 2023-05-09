@@ -26,7 +26,7 @@ template <class T>
 void Circular_Queue<T>::EnQueue(T Element)
 {
     if (Is_Full())
-        throw exception(); // error: queue is full !
+        throw "error : Queue is Full exception !\n"; // throw exception
 
     rear = (rear + 1) % Max_Size;
     array[rear] = Element;
@@ -38,7 +38,7 @@ void Circular_Queue<T>::DeQueue(T &item)
 {
     if (Is_Empty())
 
-        throw exception(); // error: queue is empty !
+        throw "error : Queue is emtpy exception !\n"; // throw exception
 
     item = array[front];
     front = (front + 1) % Max_Size;
@@ -49,7 +49,7 @@ template <class T>
 T Circular_Queue<T>::Peek()
 {
     if (Is_Empty())
-        throw exception(); // error: queue is empty !
+        throw "error : Queue is emtpy exception !\n"; // throw exception
 
     return array[front];
 }

@@ -6,11 +6,11 @@ int main()
 
     try
     {
-        cout << queue.Peek(); // error : queue is empty ! exception will be thrown
+        cout << queue.Peek(); // Peek() will throw exception because queue is empty
     }
-    catch (exception)
+    catch (const char *message) // exception handling
     {
-        cout << "Queue is empty !\n";
+        cout << message; // error : Queue is emtpy exception !
     }
 
     queue.EnQueue(1);

@@ -71,8 +71,8 @@ int main()
     {
         list_1.Max(); // now there is no elements in list so Max(): will throw an exception
     }
-    catch (exception)
+    catch (const char *message) // exception handling
     {
-        cout << "Error Linked List is empty !\n";
+        cout << message; // error : Linked List is empty exception !
     }
 }

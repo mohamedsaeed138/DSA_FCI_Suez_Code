@@ -5,12 +5,12 @@ int main()
     try
     {
         int i;
-        queue.DeQueue(i);            // error : queue is empty ,an exception will be thrown
+        queue.DeQueue(i);            // Dequeue(i) will throw exception because queue is empty
         cout << "i = " << i << endl; // will not be executed due to exception thrown
     }
-    catch (exception)
+    catch (const char *message) // exception handling
     {
-        cout << "Error queue is empty !\n";
+        cout << message; // error : Queue is emtpy exception !
     }
 
     queue.EnQueue(1);
