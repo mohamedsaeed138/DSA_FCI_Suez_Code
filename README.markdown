@@ -48,7 +48,7 @@
     * Operations
        
        * bool Is_Empty();
-       * bool Stack_Full();
+       * bool Stack_Full(); (by array only)
        * int Count();
        * void Push(T value);
        * T Pop();
@@ -69,7 +69,7 @@
       
        
        * bool Is_Empty();     
-       * bool Is_Full();
+       * bool Is_Full(); (by array only)
        * int Size();
        * void EnQueue(T value);
        * void DeQueue(T & variable);
