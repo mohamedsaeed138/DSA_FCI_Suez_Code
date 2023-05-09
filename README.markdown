@@ -53,10 +53,10 @@
 
 ### Algorithms
 
-1. Linear Search
-2. Binary Search
-3. Selection Sort
-4. Bubble Sort
-5. Insertion Sort
-6. Merge Sort
-7. Quick Sort
+1. Linear Search ( Iteratively )
+2. Binary Search ( Iteratively - Recursively )
+3. Selection Sort ( Iteratively )
+4. Bubble Sort ( Iteratively )
+5. Insertion Sort ( Iteratively )
+6. Merge Sort ( Recursively )
+7. Quick Sort ( Recursively )
