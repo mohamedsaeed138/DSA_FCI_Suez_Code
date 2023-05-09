@@ -6,7 +6,7 @@
 ## Notes
 
    1. I used Template in all Data Structures & Algorithms
-   2. a tip to understand (pointer to    function ) that i used in traversal
+   2. a tip to understand (pointer to    function ) that i used in tree traversal
     functions instead of (cout<<) , 
     for example :<br>
     void *x(int ) 's a pointer to function that accept integer parameter and do something then return nothing and to call that function we use (*pointer_name)(passed_argument) like ( *x )( 8 );
