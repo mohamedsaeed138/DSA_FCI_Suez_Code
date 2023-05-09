@@ -81,7 +81,7 @@
  
  2. Binary Tree
    * Operetions
-   * 
+   
       * int Size();   
       * int Height();    
       * void Insert(T value);    
