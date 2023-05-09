@@ -12,7 +12,7 @@ int main()
 
      clock_t start, end; // to record time
 
-     srand(time(0));
+     srand(time(0)); // initialize seed
 
      for (int i = 0; i < length; i++)
           arr_1[i] = arr_2[i] = arr_3[i] = rand(); // to assign arr values with random numbers
