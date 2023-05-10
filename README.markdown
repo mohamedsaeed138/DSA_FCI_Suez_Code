@@ -10,8 +10,9 @@
    2. I used lambda expression with (pointer to function ) in tree traversal functions instead of (cout<<) , a tip to understand (pointer to function ),  
    for example : <br>
    void *x(int ) 's a pointer to function that accept integer parameter and do something then return nothing and to call that function we use(*pointer_name)(passed_argument) like (*x )( 8 );
-   <br> for lambada expression go to this link : <https://www.programiz.com/cpp-programming/lambda-expression>
-
+   <br> for more about Functions Pointers visit this link : <[https://www.programiz.com/cpp-programming/lambda-expression](https://www.section.io/engineering-education/function-pointers-in-c++/)>
+   <br> for lambada expression visit to this link : <https://www.programiz.com/cpp-programming/lambda-expression>
+   
    3. I used exception handling in my code ,so if you didn't know what  it's ,please go to this link : <https://www.w3schools.com/cpp/cpp_exceptions.asp> it's very easy to learn .  
 
 ## Repository Content
