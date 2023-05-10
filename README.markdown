@@ -8,8 +8,6 @@
 
    1. I used Template in all Data Structures & Algorithms
    2. I used lambda expression with (pointer to function ) in tree traversal functions instead of (cout<<) , a tip to understand (pointer to function ),  
-   for example : <br>
-   void *x(int ) 's a pointer to function that accept integer parameter and do something then return nothing and to call that function we use(*pointer_name)(passed_argument) like (*x )( 8 );
    <br> for more about Functions Pointers visit this link : <https://www.section.io/engineering-education/function-pointers-in-c++/>
    <br> for lambada expression visit to this link : <https://www.programiz.com/cpp-programming/lambda-expression>
    
