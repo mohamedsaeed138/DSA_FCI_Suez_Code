@@ -46,3 +46,15 @@
   * void Inorder_Traverse(void (*Action)(T));
   * void Postorder_Traverse(void (*Action)(T));
   * void Display();
+
+* Binary Search Tree Operations
+
+  * void Insert(T value);
+
+  * bool Search(T value);
+
+  * void Delete(T value);
+
+  * void InOrder_Traverse(void (*Action)(T));
+
+  * void Display();

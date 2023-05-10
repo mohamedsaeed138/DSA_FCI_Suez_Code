@@ -51,6 +51,8 @@
 
  5. Binary Tree
 
+ 6. Binary Search Tree
+
 ### Algorithms
 
 1. Linear Search ( Iteratively )
