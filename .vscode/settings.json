@@ -3,5 +3,8 @@
     "*.embeddedhtml": "html",
     "iostream": "cpp",
     "exception": "cpp"
-  }
+  },
+  "cSpell.words": [
+    "واياكم"
+  ]
 }

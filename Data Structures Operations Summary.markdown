@@ -1,4 +1,4 @@
-## Data Strucutures Operations Summary
+# Data Structures Operations Summary
 
 * Linked List Operations
 

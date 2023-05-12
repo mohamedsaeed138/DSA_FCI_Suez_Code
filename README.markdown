@@ -7,10 +7,10 @@
 ## Notes
 
    1. I used Template in all Data Structures & Algorithms
-   2. I used lambda expression with (pointer to function ) in tree traversal functions instead of (cout<<) 
+   2. I used lambda expression with (pointer to function ) in tree traversal functions instead of (cout<<)
    <br> for more about Functions Pointers visit this link : <https://www.section.io/engineering-education/function-pointers-in-c++/>
    <br> for lambada expression visit to this link : <https://www.programiz.com/cpp-programming/lambda-expression>
-   
+
    3. I used exception handling in my code ,so if you didn't know what  it's ,please go to this link : <https://www.w3schools.com/cpp/cpp_exceptions.asp> it's very easy to learn .  
 
 ## Repository Content
