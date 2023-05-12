@@ -13,7 +13,7 @@
   * void Display();
   * void Reverse();
   * void Merge(Linked_List list_2);
-  * Linked_List<T> Split();
+  * void Split(Linked_List&);
   * T Max();
 
 * Stack Operations
