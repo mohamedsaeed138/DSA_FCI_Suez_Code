@@ -12,7 +12,7 @@
   * void Delete_At(int position);
   * void Display();
   * void Reverse();
-  * void Merge(Linked_List list_2);
+  * void Merge(Linked_List);
   * void Split(Linked_List&);
   * T Max();
 
