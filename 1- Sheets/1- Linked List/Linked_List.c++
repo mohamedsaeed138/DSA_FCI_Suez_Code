@@ -193,7 +193,7 @@ void Linked_List<T>::Split(Linked_List &list2)
 {
 
     if (head == NULL || head->next == NULL)
-        throw "error : Linked List can't be splitted exception";
+        throw "error : Linked List can't be splitted exception !\n";
     else
     {
         Node *Tmp = head;
