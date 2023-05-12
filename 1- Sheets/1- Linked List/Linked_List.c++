@@ -189,13 +189,11 @@ void Linked_List<T>::Merge(Linked_List List_2)
 }
 
 template <class T>
-Linked_List<T> Linked_List<T>::Split()
+void Linked_List<T>::Split(Linked_List &list2)
 {
-    Linked_List<T> Tmp_List;
 
     if (head == NULL || head->next == NULL)
-
-        Tmp_List.head = NULL;
+        throw "error : Linked List can't be splitted exception";
     else
     {
         Node *Tmp = head;
@@ -204,10 +202,9 @@ Linked_List<T> Linked_List<T>::Split()
         for (int counter = 0; counter < (size / 2) - 1; counter++)
             Tmp = Tmp->next;
 
-        Tmp_List.head = Tmp->next;
+        list2.head = Tmp->next;
         Tmp->next = NULL;
     }
-    return Tmp_List;
 }
 
 template <class T>

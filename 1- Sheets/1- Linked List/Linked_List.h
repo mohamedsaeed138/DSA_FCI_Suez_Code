@@ -32,7 +32,7 @@ public:
 
     void Merge(Linked_List);
 
-    Linked_List<T> Split();
+    void Split(Linked_List &);
 
     T Max();
 };

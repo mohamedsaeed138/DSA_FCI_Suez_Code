@@ -45,7 +45,7 @@ int main()
     cout << "List_1 : ";
     list_1.Display(); //[ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ]
 
-    list_3 = list_1.Split();
+    list_1.Split(list_3);
     cout << "List_3 : ";
     list_3.Display(); //[ 5 , 6 , 7 , 8 , 9 ]
 
