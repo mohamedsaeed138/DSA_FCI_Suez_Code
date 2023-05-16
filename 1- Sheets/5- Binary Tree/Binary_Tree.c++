@@ -4,10 +4,7 @@ template <class T>
 Binary_Tree<T>::Binary_Tree() : root(NULL) {}
 
 template <class T>
-int Binary_Tree<T>::Size()
-{
-    return Size_Rec_Aux(root);
-}
+int Binary_Tree<T>::Size() { return Size_Rec_Aux(root); }
 
 template <class T>
 int Binary_Tree<T>::Size_Rec_Aux(Node *node)
@@ -18,10 +15,7 @@ int Binary_Tree<T>::Size_Rec_Aux(Node *node)
 }
 
 template <class T>
-int Binary_Tree<T>::Height()
-{
-    return Height_Rec_Aux(root);
-}
+int Binary_Tree<T>::Height() { return Height_Rec_Aux(root); }
 
 template <class T>
 int Binary_Tree<T>::Height_Rec_Aux(Node *node)
@@ -34,11 +28,11 @@ int Binary_Tree<T>::Height_Rec_Aux(Node *node)
 }
 
 template <class T>
-void Binary_Tree<T>::Insert(T item)
+void Binary_Tree<T>::Insert(T value)
 {
     Node *new_node = new Node;
 
-    new_node->data = item;
+    new_node->data = value;
     new_node->left = NULL;
     new_node->right = NULL;
 
@@ -58,21 +52,21 @@ void Binary_Tree<T>::Insert(T item)
 template <class T>
 void Binary_Tree<T>::Insert_Rec_Aux(queue<Node *> &nodes, Node *&new_node)
 {
-    Node *root = nodes.front();
+    Node *node = nodes.front();
     nodes.pop();
 
-    if (root->left == NULL)
+    if (node->left == NULL)
 
-        root->left = new_node;
+        node->left = new_node;
 
-    else if (root->right == NULL)
+    else if (node->right == NULL)
 
-        root->right = new_node;
+        node->right = new_node;
 
     else
     {
-        nodes.push(root->left);
-        nodes.push(root->right);
+        nodes.push(node->left);
+        nodes.push(node->right);
 
         Insert_Rec_Aux(nodes, new_node);
     }

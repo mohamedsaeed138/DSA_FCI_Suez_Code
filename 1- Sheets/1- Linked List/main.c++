@@ -4,11 +4,11 @@ using namespace std;
 
 int main()
 {
-    Linked_List<int> list_1, list_2, list_3; // call the first constructor ()
+    Linked_List<int> list_1, list_2, list_3; // call the  constructor ()
     cout << "The First List : " << endl;
 
-    cout << "is it Empty ?  -" << (list_1.Is_Empty() ? "True" : "False") << endl; // 1 = true
-    cout << "The Size = " << list_1.Count() << " Element" << endl;                // 0
+    cout << "is it Empty ? -" << (list_1.Is_Empty() ? "True" : "False") << endl; // -True
+    cout << "The Size = " << list_1.Count() << " elements" << endl;              // 0
 
     list_1.Insert_First(1);
     cout << "List_1 : ";

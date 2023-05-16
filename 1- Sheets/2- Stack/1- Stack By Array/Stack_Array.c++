@@ -4,30 +4,21 @@ template <class T>
 Stack_Array<T>::Stack_Array() : top(-1) {}
 
 template <class T>
-bool Stack_Array<T>::Is_Empty()
-{
-    return top == -1;
-}
+bool Stack_Array<T>::Is_Empty() { return top == -1; }
 
 template <class T>
-bool Stack_Array<T>::Stack_Full()
-{
-    return top == Max_Size - 1;
-}
+bool Stack_Array<T>::Stack_Full() { return top == Max_Size - 1; }
 
 template <class T>
-int Stack_Array<T>::Count()
-{
-    return top + 1;
-}
+int Stack_Array<T>::Count() { return top + 1; }
 
 template <class T>
-void Stack_Array<T>::Push(T New_Item)
+void Stack_Array<T>::Push(T value)
 {
     if (top == Max_Size - 1)                         // top :0->99
         throw "error : Stack is Full exception !\n"; // throw exception
     else
-        items[++top] = New_Item;
+        items[++top] = value;
 }
 
 template <class T>

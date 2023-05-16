@@ -46,15 +46,15 @@ typename BST<T>::Node *BST<T>::Delete_Rec_Aux(Node *node, T value)
     {
         if (node->left == NULL)
         {
-            Node *Tmp = node->right;
+            Node *tmp = node->right;
             delete node;
-            return Tmp;
+            return tmp;
         }
         else if (node->right == NULL)
         {
-            Node *Tmp = node->left;
+            Node *tmp = node->left;
             delete node;
-            return Tmp;
+            return tmp;
         }
         else
         {

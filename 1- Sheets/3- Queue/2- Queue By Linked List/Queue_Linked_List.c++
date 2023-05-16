@@ -3,46 +3,40 @@ template <class T>
 Queue_Linked_List<T>::Queue_Linked_List() : front(NULL), rear(NULL), size(0) {}
 
 template <class T>
-bool Queue_Linked_List<T>::Is_Empty()
-{
-    return size == 0;
-}
+bool Queue_Linked_List<T>::Is_Empty() { return size == 0; }
 
 template <class T>
-int Queue_Linked_List<T>::Size()
-{
-    return size;
-}
+int Queue_Linked_List<T>::Size() { return size; }
 
 template <class T>
-void Queue_Linked_List<T>::EnQueue(T New_Item)
+void Queue_Linked_List<T>::EnQueue(T value)
 {
-    Node *New_Node = new Node;
-    New_Node->data = New_Item;
-    New_Node->next = NULL;
+    Node *new_node = new Node;
+    new_node->data = value;
+    new_node->next = NULL;
 
     if (front == NULL)
-        rear = front = New_Node;
+        rear = front = new_node;
     else
     {
-        rear->next = New_Node;
-        rear = New_Node;
+        rear->next = new_node;
+        rear = new_node;
     }
 
     size++;
 }
 
 template <class T>
-void Queue_Linked_List<T>::DeQueue(T &item)
+void Queue_Linked_List<T>::DeQueue(T &variable)
 {
     if (front == NULL)
         throw "error : Queue is emtpy exception !\n"; // throw exception
 
-    Node *Tmp = front;
-    item = front->data;
+    Node *tmp = front;
+    variable = front->data;
 
     front = front->next;
-    delete Tmp;
+    delete tmp;
 
     if (front == NULL)
         rear = NULL;
@@ -62,13 +56,13 @@ T Queue_Linked_List<T>::Peek()
 template <class T>
 void Queue_Linked_List<T>::Display()
 {
-    Node *Tmp = front;
+    Node *tmp = front;
     cout << "[ ";
-    while (Tmp != NULL)
+    while (tmp != NULL)
     {
-        cout << Tmp->data;
-        cout << (Tmp->next == NULL ? "" : " , ");
-        Tmp = Tmp->next;
+        cout << tmp->data;
+        cout << (tmp->next == NULL ? "" : " , ");
+        tmp = tmp->next;
     }
     cout << " ]\n";
 }

@@ -3,58 +3,55 @@ template <class T>
 Linked_List<T>::Linked_List() : head(NULL) {}
 
 template <class T>
-bool Linked_List<T>::Is_Empty()
-{
-    return head == NULL;
-}
+bool Linked_List<T>::Is_Empty() { return head == NULL; }
 
 template <class T>
 int Linked_List<T>::Count()
 {
     int count = 0;
-    Node *Tmp = head;
+    Node *tmp = head;
 
-    while (Tmp != NULL)
+    while (tmp != NULL)
     {
         count++;
-        Tmp = Tmp->next;
+        tmp = tmp->next;
     }
     return count;
 }
 
 template <class T>
-void Linked_List<T>::Insert_First(T New_Item)
+void Linked_List<T>::Insert_First(T value)
 {
-    Node *New_Node = new Node;
+    Node *new_node = new Node;
 
-    New_Node->data = New_Item;
-    New_Node->next = head;
-    head = New_Node;
+    new_node->data = value;
+    new_node->next = head;
+    head = new_node;
 }
 
 template <class T>
-void Linked_List<T>::Insert_Last(T New_Item)
+void Linked_List<T>::Insert_Last(T value)
 {
-    Node *New_Node = new Node;
-    New_Node->data = New_Item;
-    New_Node->next = NULL;
+    Node *new_node = new Node;
+    new_node->data = value;
+    new_node->next = NULL;
 
     if (head == NULL)
     {
-        head = New_Node;
+        head = new_node;
         return;
     }
 
-    Node *Tmp = head;
-    while (Tmp->next != NULL)
+    Node *tmp = head;
+    while (tmp->next != NULL)
     {
-        Tmp = Tmp->next;
+        tmp = tmp->next;
     }
-    Tmp->next = New_Node;
+    tmp->next = new_node;
 }
 
 template <class T>
-void Linked_List<T>::Insert_At(T New_Item, int position)
+void Linked_List<T>::Insert_At(T value, int position)
 {
     if (position < 0 || position > Count())
 
@@ -62,22 +59,22 @@ void Linked_List<T>::Insert_At(T New_Item, int position)
 
     else if (position == 0)
     {
-        Insert_First(New_Item);
+        Insert_First(value);
     }
     else
     {
-        Node *New_Node = new Node;
-        New_Node->data = New_Item;
+        Node *new_node = new Node;
+        new_node->data = value;
 
-        Node *Tmp = head;
+        Node *tmp = head;
         int counter = 0;
         while (counter < position - 1)
         {
-            Tmp = Tmp->next;
+            tmp = tmp->next;
             counter++;
         }
-        New_Node->next = Tmp->next;
-        Tmp->next = New_Node;
+        new_node->next = tmp->next;
+        tmp->next = new_node;
     }
 }
 
@@ -88,9 +85,9 @@ void Linked_List<T>::Delete_First()
 
         throw "error : Linked List is empty exception !\n"; // throw exception
 
-    Node *Tmp = head;
+    Node *tmp = head;
     head = head->next;
-    delete Tmp;
+    delete tmp;
 }
 template <class T>
 void Linked_List<T>::Delete_Last()
@@ -103,14 +100,14 @@ void Linked_List<T>::Delete_Last()
         Delete_First();
     else
     {
-        Node *Tmp = head;
-        while (Tmp->next->next != NULL)
+        Node *tmp = head;
+        while (tmp->next->next != NULL)
         {
-            Tmp = Tmp->next;
+            tmp = tmp->next;
         }
 
-        delete Tmp->next;
-        Tmp->next = NULL;
+        delete tmp->next;
+        tmp->next = NULL;
     }
 }
 
@@ -127,28 +124,28 @@ void Linked_List<T>::Delete_At(int position)
     {
 
         int counter = 0;
-        Node *Tmp = head;
+        Node *tmp = head;
         while (counter < position - 1)
         {
             counter++;
-            Tmp = Tmp->next;
+            tmp = tmp->next;
         }
-        Node *Deleted_Node = Tmp->next;
-        Tmp->next = Deleted_Node->next;
-        delete Deleted_Node;
+        Node *deleted_node = tmp->next;
+        tmp->next = deleted_node->next;
+        delete deleted_node;
     }
 }
 
 template <class T>
 void Linked_List<T>::Display()
 {
-    Node *Tmp = head;
+    Node *tmp = head;
     cout << "[ ";
-    while (Tmp != NULL)
+    while (tmp != NULL)
     {
-        cout << Tmp->data << (Tmp->next == NULL ? "" : " , ");
+        cout << tmp->data << (tmp->next == NULL ? "" : " , ");
 
-        Tmp = Tmp->next;
+        tmp = tmp->next;
     }
     cout << " ]" << endl;
 }
@@ -159,33 +156,33 @@ void Linked_List<T>::Reverse()
     if (head == NULL || head->next == NULL)
         return;
 
-    Node *Current = head->next;
-    Node *Next;
+    Node *current = head->next;
+    Node *next;
     head->next = NULL;
-    while (Current != NULL) // starting from the second element
+    while (current != NULL) // starting from the second element
     {
-        Next = Current->next;
+        next = current->next;
 
-        Current->next = head;
+        current->next = head;
 
-        head = Current;
+        head = current;
 
-        Current = Next;
+        current = next;
     }
 }
 
 template <class T>
-void Linked_List<T>::Merge(Linked_List List_2)
+void Linked_List<T>::Merge(Linked_List list_2)
 {
     if (head == NULL)
-        head = List_2.head;
+        head = list_2.head;
 
-    Node *Tmp = head;
-    while (Tmp->next != NULL)
+    Node *tmp = head;
+    while (tmp->next != NULL)
     {
-        Tmp = Tmp->next;
+        tmp = tmp->next;
     }
-    Tmp->next = List_2.head;
+    tmp->next = list_2.head;
 }
 
 template <class T>
@@ -196,14 +193,14 @@ void Linked_List<T>::Split(Linked_List &list2)
         throw "error : Linked List can't be splitted exception !\n";
     else
     {
-        Node *Tmp = head;
+        Node *tmp = head;
         int size = Count();
 
         for (int counter = 0; counter < (size / 2) - 1; counter++)
-            Tmp = Tmp->next;
+            tmp = tmp->next;
 
-        list2.head = Tmp->next;
-        Tmp->next = NULL;
+        list2.head = tmp->next;
+        tmp->next = NULL;
     }
 }
 
@@ -215,14 +212,14 @@ T Linked_List<T>::Max()
 
     T max = head->data;
 
-    Node *Tmp = head->next;
+    Node *tmp = head->next;
 
-    while (Tmp != NULL)
+    while (tmp != NULL)
     {
-        if (Tmp->data > max)
-            max = Tmp->data;
+        if (tmp->data > max)
+            max = tmp->data;
 
-        Tmp = Tmp->next;
+        tmp = tmp->next;
     }
 
     return max;

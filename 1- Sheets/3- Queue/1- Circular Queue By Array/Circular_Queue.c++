@@ -5,42 +5,33 @@ template <class T>
 Circular_Queue<T>::Circular_Queue() : front(0), rear(-1), size(0) {}
 
 template <class T>
-bool Circular_Queue<T>::Is_Empty()
-{
-    return size == 0;
-}
+bool Circular_Queue<T>::Is_Empty() { return size == 0; }
 
 template <class T>
-bool Circular_Queue<T>::Is_Full()
-{
-    return size == Max_Size;
-}
+bool Circular_Queue<T>::Is_Full() { return size == Max_Size; }
 
 template <class T>
-int Circular_Queue<T>::Size()
-{
-    return size;
-}
+int Circular_Queue<T>::Size() { return size; }
 
 template <class T>
-void Circular_Queue<T>::EnQueue(T Element)
+void Circular_Queue<T>::EnQueue(T value)
 {
     if (Is_Full())
         throw "error : Queue is Full exception !\n"; // throw exception
 
     rear = (rear + 1) % Max_Size;
-    array[rear] = Element;
+    array[rear] = value;
     size++;
 }
 
 template <class T>
-void Circular_Queue<T>::DeQueue(T &item)
+void Circular_Queue<T>::DeQueue(T &variable)
 {
     if (Is_Empty())
 
         throw "error : Queue is emtpy exception !\n"; // throw exception
 
-    item = array[front];
+    variable = array[front];
     front = (front + 1) % Max_Size;
     size--;
 }

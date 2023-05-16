@@ -4,9 +4,9 @@ int main()
 {
 
     string expression;
-    cout << "Enter an expression:";
+    cout << "Enter an expression : ";
 
     cin >> expression;
 
-    cout << (Are_Balanced(expression) ? "Balanced" : "Not Balanced") << endl;
+    cout << (Are_Balanced(expression) ? "Balanced\n" : "Not Balanced\n");
 }

@@ -4,33 +4,30 @@ template <class T>
 Stack_Linked_List<T>::Stack_Linked_List() : top(NULL) {}
 
 template <class T>
-bool Stack_Linked_List<T>::Is_Empty()
-{
-    return top == NULL;
-}
+bool Stack_Linked_List<T>::Is_Empty() { return top == NULL; }
 
 template <class T>
 int Stack_Linked_List<T>::Count()
 {
-    int Count = 0;
-    Node *Tmp = top;
+    int count = 0;
+    Node *tmp = top;
 
-    while (Tmp != NULL)
+    while (tmp != NULL)
     {
-        Count++;
-        Tmp = Tmp->next;
+        count++;
+        tmp = tmp->next;
     }
-    return Count;
+    return count;
 }
 
 template <class T>
-void Stack_Linked_List<T>::Push(T New_Item)
+void Stack_Linked_List<T>::Push(T value)
 {
-    Node *New_Node = new Node;
+    Node *new_node = new Node;
 
-    New_Node->data = New_Item;
-    New_Node->next = top;
-    top = New_Node;
+    new_node->data = value;
+    new_node->next = top;
+    top = new_node;
 }
 
 template <class T>
@@ -39,10 +36,10 @@ T Stack_Linked_List<T>::Pop()
     if (top == NULL)
         throw "error : Stack is empty exception !\n"; // throw exception
 
-    Node *Tmp = top;
+    Node *tmp = top;
     T value = top->data;
     top = top->next;
-    delete Tmp;
+    delete tmp;
     return value;
 }
 
@@ -58,13 +55,13 @@ T Stack_Linked_List<T>::Peek()
 template <class T>
 void Stack_Linked_List<T>::Display()
 {
-    Node *Tmp = top;
+    Node *tmp = top;
     cout << "[ ";
-    while (Tmp != NULL)
+    while (tmp != NULL)
     {
-        cout << Tmp->data << (Tmp->next == NULL ? "" : " , ");
+        cout << tmp->data << (tmp->next == NULL ? "" : " , ");
 
-        Tmp = Tmp->next;
+        tmp = tmp->next;
     }
     cout << " ]" << endl;
 }
