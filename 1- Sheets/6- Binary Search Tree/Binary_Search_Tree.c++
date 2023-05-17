@@ -67,6 +67,17 @@ typename BST<T>::Node *BST<T>::Delete_Rec_Aux(Node *node, T value)
 }
 
 template <class T>
+typename BST<T>::Node *BST<T>::Max_Value_Node(Node *node)
+{
+    if (node == NULL)
+        return NULL;
+    else if (node->right == NULL)
+        return node;
+    else
+        return Max_Value_Node(node->right);
+}
+
+template <class T>
 bool BST<T>::Search(T value) { return Search_Rec_Aux(root, value); }
 
 template <class T>
@@ -94,17 +105,6 @@ void BST<T>::InOrder_Traverse_Rec_Aux(Node *node, void (*Action)(T))
     InOrder_Traverse_Rec_Aux(node->left, Action);
     (*Action)(node->data);
     InOrder_Traverse_Rec_Aux(node->right, Action);
-}
-
-template <class T>
-typename BST<T>::Node *BST<T>::Max_Value_Node(Node *node)
-{
-    if (node == NULL)
-        return NULL;
-    else if (node->right == NULL)
-        return node;
-    else
-        return Max_Value_Node(node->right);
 }
 
 template <class T>
