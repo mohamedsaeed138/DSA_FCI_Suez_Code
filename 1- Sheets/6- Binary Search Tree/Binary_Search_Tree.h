@@ -8,8 +8,8 @@ class BST
     struct Node
     {
         T data;
-        Node *right;
         Node *left;
+        Node *right;
         Node(T value);
     };
 
