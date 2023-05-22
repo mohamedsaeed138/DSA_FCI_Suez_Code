@@ -3,7 +3,7 @@
 #include "Insertion Sort.c++"
 #include <time.h>
 
-const int length = 1000; // array's length
+const int length = 10000; // array's length
 int main()
 {
      int arr_1[length]; // will be sorted by selection sort
