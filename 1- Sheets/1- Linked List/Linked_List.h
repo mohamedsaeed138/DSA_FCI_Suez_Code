@@ -25,6 +25,7 @@ public:
     void Delete_First();
     void Delete_Last();
     void Delete_At(int);
+    void Delete(T);
 
     void Display();
 
@@ -35,4 +36,6 @@ public:
     void Split(Linked_List &);
 
     T Max();
+
+    bool Search(T);
 };

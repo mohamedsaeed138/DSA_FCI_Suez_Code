@@ -40,6 +40,8 @@ int main()
     cout << "List_2 : ";
     list_2.Display(); //[ 4 , 5 , 6 , 7 , 8 , 9 ]
 
+    cout << "Does List_2 contain 5 ? -" << (list_2.Search(5) ? "True\n" : "False\n"); // True
+
     list_1.Merge(list_2);
 
     cout << "List_1 : ";

@@ -10,11 +10,13 @@
   * void Delete_First();
   * void Delete_Last();
   * void Delete_At(int position);
+  * void Delete(T);
   * void Display();
   * void Reverse();
   * void Merge(Linked_List);
   * void Split(Linked_List&);
   * T Max();
+  * bool Search(T);
 
 * Stack Operations
 

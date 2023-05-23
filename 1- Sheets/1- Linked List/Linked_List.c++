@@ -137,6 +137,32 @@ void Linked_List<T>::Delete_At(int position)
 }
 
 template <class T>
+void Linked_List<T>::Delete(T value)
+{
+    if (head == NULL)
+        return; // list is empty so value is not found
+    else if (head->data == value)
+
+        Delete_First();
+
+    else
+    {
+        Node *tmp = head;
+        while (tmp->next != NULL)
+        {
+            if (tmp->next->data == value)
+            {
+                Node *deleted_node = tmp->next;
+                tmp->next = deleted_node->next;
+                delete deleted_node;
+                return;
+            }
+            tmp = tmp->next;
+        }
+    }
+}
+
+template <class T>
 void Linked_List<T>::Display()
 {
     Node *tmp = head;
@@ -223,4 +249,20 @@ T Linked_List<T>::Max()
     }
 
     return max;
+}
+
+template <class T>
+bool Linked_List<T>::Search(T value)
+{
+    Node *tmp = head;
+
+    while (tmp != NULL)
+    {
+        if (tmp->data == value)
+            return true;
+
+        tmp = tmp->next;
+    }
+
+    return false;
 }
