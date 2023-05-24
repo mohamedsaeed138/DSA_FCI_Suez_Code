@@ -8,7 +8,7 @@ int main()
 
     Print(arr, length); // [ 1432 , 51 , -2 , 1 , 443 ]
 
-    Insertion_Sort(arr, length); // [ -2 , 1 , 51 , 443 , 1432 ]
+    Insertion_Sort(arr, length);
 
-    Print(arr, length);
+    Print(arr, length); // [ -2 , 1 , 51 , 443 , 1432 ]
 }
