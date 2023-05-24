@@ -8,7 +8,7 @@ int Partition(T arr[], int low, int high)
 
     int i = low - 1;
 
-    for (int j = low, pass = 1; j < high; j++, pass++)
+    for (int j = low; j < high; j++)
     {
 
         if (arr[j] <= pivot)
