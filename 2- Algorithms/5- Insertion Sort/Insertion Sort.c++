@@ -2,11 +2,11 @@
 using namespace std;
 
 template <class T>
-void Insertion_Sort(T arr[], int n)
+void Insertion_Sort(T arr[], int length)
 {
     int i, j;
     T key;
-    for (i = 1; i < n; i++)
+    for (i = 1; i < length; i++)
     {
         key = arr[i];
         j = i - 1;
