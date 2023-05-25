@@ -89,6 +89,7 @@ void Linked_List<T>::Delete_First()
     head = head->next;
     delete tmp;
 }
+
 template <class T>
 void Linked_List<T>::Delete_Last()
 {
@@ -185,6 +186,7 @@ void Linked_List<T>::Reverse()
     Node *current = head->next;
     Node *next;
     head->next = NULL;
+    
     while (current != NULL) // starting from the second element
     {
         next = current->next;
