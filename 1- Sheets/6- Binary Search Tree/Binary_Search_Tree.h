@@ -21,7 +21,7 @@ class BST
 
     bool Search_Rec_Aux(Node *node, T value);
 
-    void InOrder_Traverse_Rec_Aux(Node *node, void (*Action)(T));
+    void InOrder_Traverse_Rec_Aux(Node *node, void (*action)(T));
 
     Node *Max_Value_Node(Node *node);
 
@@ -34,7 +34,7 @@ public:
 
     void Delete(T value);
 
-    void InOrder_Traverse(void (*Action)(T));
+    void InOrder_Traverse(void (*action)(T));
 
     void Display(); // by in order traverse
 };

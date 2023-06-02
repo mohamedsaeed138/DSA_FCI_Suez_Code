@@ -94,17 +94,17 @@ bool BST<T>::Search_Rec_Aux(Node *node, T value)
 }
 
 template <class T>
-void BST<T>::InOrder_Traverse(void (*Action)(T)) { InOrder_Traverse_Rec_Aux(root, Action); }
+void BST<T>::InOrder_Traverse(void (*action)(T)) { InOrder_Traverse_Rec_Aux(root, action); }
 
 template <class T>
-void BST<T>::InOrder_Traverse_Rec_Aux(Node *node, void (*Action)(T))
+void BST<T>::InOrder_Traverse_Rec_Aux(Node *node, void (*action)(T))
 {
     if (node == NULL)
         return;
 
-    InOrder_Traverse_Rec_Aux(node->left, Action);
-    (*Action)(node->data);
-    InOrder_Traverse_Rec_Aux(node->right, Action);
+    InOrder_Traverse_Rec_Aux(node->left, action);
+    (*action)(node->data);
+    InOrder_Traverse_Rec_Aux(node->right, action);
 }
 
 template <class T>
