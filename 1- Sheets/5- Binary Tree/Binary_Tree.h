@@ -33,10 +33,10 @@ public:
 
     void Insert(T);
 
-    void Level_order_Traverse(void (*Action)(T));
-    void Preorder_Traverse(void (*Action)(T));
-    void Inorder_Traverse(void (*Action)(T));
-    void Postorder_Traverse(void (*Action)(T));
+    void Level_order_Traverse(void (*action)(T));
+    void Preorder_Traverse(void (*action)(T));
+    void Inorder_Traverse(void (*action)(T));
+    void Postorder_Traverse(void (*action)(T));
 
     void Display();
 };

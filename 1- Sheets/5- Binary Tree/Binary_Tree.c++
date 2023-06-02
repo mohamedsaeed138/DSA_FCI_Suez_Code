@@ -73,7 +73,7 @@ void Binary_Tree<T>::Insert_Rec_Aux(queue<Node *> &nodes, Node *&new_node)
 }
 
 template <class T>
-void Binary_Tree<T>::Level_order_Traverse(void (*Action)(T))
+void Binary_Tree<T>::Level_order_Traverse(void (*action)(T))
 {
     if (root == NULL)
         return;
@@ -87,7 +87,7 @@ void Binary_Tree<T>::Level_order_Traverse(void (*Action)(T))
         Node *node = nodes.front();
         nodes.pop();
 
-        (*Action)(node->data);
+        (*action)(node->data);
 
         if (node->left != NULL)
             nodes.push(node->left);
@@ -97,54 +97,54 @@ void Binary_Tree<T>::Level_order_Traverse(void (*Action)(T))
 }
 
 template <class T>
-void Binary_Tree<T>::Preorder_Traverse(void (*Action)(T))
+void Binary_Tree<T>::Preorder_Traverse(void (*action)(T))
 {
-    Preorder_Traverse_Rec_Aux(root, Action);
+    Preorder_Traverse_Rec_Aux(root, action);
 }
 
 template <class T>
-void Binary_Tree<T>::Preorder_Traverse_Rec_Aux(Node *node, void (*Action)(T))
+void Binary_Tree<T>::Preorder_Traverse_Rec_Aux(Node *node, void (*action)(T))
 {
     if (node == NULL)
         return;
 
-    (*Action)(node->data);
-    Preorder_Traverse_Rec_Aux(node->left, Action);
-    Preorder_Traverse_Rec_Aux(node->right, Action);
+    (*action)(node->data);
+    Preorder_Traverse_Rec_Aux(node->left, action);
+    Preorder_Traverse_Rec_Aux(node->right, action);
 }
 
 template <class T>
-void Binary_Tree<T>::Inorder_Traverse(void (*Action)(T))
+void Binary_Tree<T>::Inorder_Traverse(void (*action)(T))
 {
-    Inorder_Traverse_Rec_Aux(root, Action);
+    Inorder_Traverse_Rec_Aux(root, action);
 }
 
 template <class T>
-void Binary_Tree<T>::Inorder_Traverse_Rec_Aux(Node *node, void (*Action)(T))
-{
-    if (node == NULL)
-        return;
-
-    Inorder_Traverse_Rec_Aux(node->left, Action);
-    (*Action)(node->data);
-    Inorder_Traverse_Rec_Aux(node->right, Action);
-}
-
-template <class T>
-void Binary_Tree<T>::Postorder_Traverse(void (*Action)(T))
-{
-    Postorder_Traverse_Rec_Aux(root, Action);
-}
-
-template <class T>
-void Binary_Tree<T>::Postorder_Traverse_Rec_Aux(Node *node, void (*Action)(T))
+void Binary_Tree<T>::Inorder_Traverse_Rec_Aux(Node *node, void (*action)(T))
 {
     if (node == NULL)
         return;
 
-    Postorder_Traverse_Rec_Aux(node->left, Action);
-    Postorder_Traverse_Rec_Aux(node->right, Action);
-    (*Action)(node->data);
+    Inorder_Traverse_Rec_Aux(node->left, action);
+    (*action)(node->data);
+    Inorder_Traverse_Rec_Aux(node->right, action);
+}
+
+template <class T>
+void Binary_Tree<T>::Postorder_Traverse(void (*action)(T))
+{
+    Postorder_Traverse_Rec_Aux(root, action);
+}
+
+template <class T>
+void Binary_Tree<T>::Postorder_Traverse_Rec_Aux(Node *node, void (*action)(T))
+{
+    if (node == NULL)
+        return;
+
+    Postorder_Traverse_Rec_Aux(node->left, action);
+    Postorder_Traverse_Rec_Aux(node->right, action);
+    (*action)(node->data);
 }
 
 template <class T>
