@@ -11,10 +11,11 @@ bool Check_Palindrome(string &String)
         container.push(String[i]);
     }
 
-    int i = String.length() - String.length() / 2;
+    int i = String.length() - String.length() / 2; // to start from the second half
+
     for (; i < String.length(); i++)
     {
-        if (String[i] != container.top()) // top==peek
+        if (String[i] != container.top())
             return false;
         container.pop();
     }
