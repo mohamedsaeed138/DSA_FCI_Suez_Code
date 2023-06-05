@@ -8,6 +8,5 @@ int main()
     cout << "enter a string : ";
     getline(cin, example);
 
-    Reverse_String(example);
     cout << Reverse_String(example) << endl;
 }
