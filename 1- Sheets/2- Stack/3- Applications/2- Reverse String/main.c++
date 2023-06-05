@@ -9,5 +9,5 @@ int main()
     getline(cin, example);
 
     Reverse_String(example);
-    cout << endl;
+    cout << Reverse_String(example) << endl;
 }

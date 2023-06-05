@@ -3,18 +3,22 @@
 #include "stack"
 using namespace std;
 
-void Reverse_String(string example)
+string Reverse_String(string example)
 {
     stack<char> container;
+    string reversed;
+
     int counter = 0;
     while (counter < example.length())
     {
         container.push(example[counter++]);
     }
 
-    while (!container.empty()) // to print the reverse string
+    while (!container.empty()) // to  reverse string
     {
-        cout << container.top();
+        reversed.push_back(container.top()); // push_back: insert the char at the end of the string
         container.pop();
     }
+
+    return reversed;
 }
